@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addUser } from '../actions/adduser';
+import { createUser } from '../actions/userAction';
 
 class AddUser extends Component {
     constructor(props) {
@@ -26,7 +26,7 @@ class AddUser extends Component {
             username: this.state.username,
             useraddress: this.state.useraddress,
         }
-        this.props.addUser(user);
+        this.props.createUser(user);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -74,4 +74,4 @@ const mapStateToProps = (state) => ({
     errors: state.errors
 })
 
-export  default connect(mapStateToProps, { addUser })(AddUser)
+export  default connect(mapStateToProps, { createUser })(AddUser)

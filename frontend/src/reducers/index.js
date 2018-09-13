@@ -6,5 +6,5 @@ import userReducer from './userReducer';
 export default combineReducers({
     errors: errorReducer,
     auth: authReducer,
-    useroption: userReducer
+    users: userReducer
 });
